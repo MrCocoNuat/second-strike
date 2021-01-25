@@ -37,6 +37,14 @@ The map window also has some extra stuff: in the bottom left, the action
 counter is displayed. The bottom hosts the action bar, which is used to do
 things. On the right is the research tracker.
 
+![The Map](https://github.com/MrCocoNuat/second-strike/blob/main/assets/map.png)
+
+Tile ownership is indicated by border color. Red is player 1, blue is player 2,
+and green is an irradiated tile. Darker colors indicate that the tile was
+previously destroyed by a missile.
+
+![Example Tiles](https://github.com/MrCocoNuat/second-strike/blob/main/assets/tiles.png)
+
 #### Gameplay:
 
 Player 1 goes first: player 1 will only have 1 action the first turn, but every
@@ -44,53 +52,65 @@ subsequent turn, each player gets 2 actions and up to 6 more, 1 for every 6
 tiles controlled. When counting time in turns, both players taking a turn each
 counts as two turns elapsing!
 
+![Example Action counter](https://github.com/MrCocoNuat/second-strike/blob/main/assets/actions.png)
+
 Actions can be spent on the action bar, which has 7 buttons. Any action can be
 canceled using the cancel button, which the seventh button will act as once an
 action is selected.
 
  1 Action:
- - Build Missile: Select a tile that you own that has not reached missile
+ - ![Build Button](https://github.com/MrCocoNuat/second-strike/blob/main/assets/buttonAdd.png)
+   Build Missile: Select a tile that you own that has not reached missile
    capacity, then select a missile type to build.
- - Scrap Missile: Select a tile that you own that has missiles, then select a
+ - ![Scrap Button](https://github.com/MrCocoNuat/second-strike/blob/main/assets/buttonScrap.png)
+   Scrap Missile: Select a tile that you own that has missiles, then select a
    missile to scrap.
- - Expand: Select an uncontrolled tile orthogonally adjacent to one you own and
+ - ![Expand Button](https://github.com/MrCocoNuat/second-strike/blob/main/assets/buttonExpand.png)
+   Expand: Select an uncontrolled tile orthogonally adjacent to one you own and
    take control of it. You can expand to destroyed tiles, but irradiated tiles
    are off limits.
- - Research: Select a subject in the research tracker to add a research point.
+ - ![Research Button](https://github.com/MrCocoNuat/second-strike/blob/main/assets/buttonResearch.png)
+   Research: Select a subject in the research tracker to add a research point.
    Subjects can be researched in any order. You cannot select already completed
    subjects.
  0 Actions:
- - Attack: Select a tile that you own that has missiles, then select a missile,
+ - ![Attack Button](https://github.com/MrCocoNuat/second-strike/blob/main/assets/buttonAttack.png)
+   Attack: Select a tile that you own that has missiles, then select a missile,
    then select a tile that you do not own to launch an attack.
- - Defend: Select a tile that you own that has a cruise missile, then select a
+ - ![Defend Button](https://github.com/MrCocoNuat/second-strike/blob/main/assets/buttonDefend.png)
+   Defend: Select a tile that you own that has a cruise missile, then select a
    tile that is being attacked. The intercepted missile is the one that will
    hit its target earliest, and dirty bombs will be prioritized if there is
    more than one missile that will strike on the same turn. You can defend your
    opponent's tiles if you feel like it.
  N Actions:
- - Nothing: Ends your turn. Don't press this by accident! This is the only
+ - ![Nothing Button](https://github.com/MrCocoNuat/second-strike/blob/main/assets/buttonNothing.png)
+   Nothing: Ends your turn. Don't press this by accident! This is the only
    possible move when you run out of actions and opportunities to attack or
    defend. As stated, if you are in the middle of performing an action, this
    will cancel that instead.
 
 The different missiles function as such: 
 
- - Cruise Missile (blue): Fast and light, this takes only 3 turns to reach its
+ - ![Cruise Button](https://github.com/MrCocoNuat/second-strike/blob/main/assets/buttonCruise.png)
+   Cruise Missile (blue): Fast and light, this takes only 3 turns to reach its
    destination. This missile can also intercept others; the target is the tile
    this missile will protect, which is reached in 0 turns. Either way, a tiny
    fuel tank means a range of only 2 tiles, taxicab metric. 0 research points,
-   so this is available to build immediately. Blue.
- - ICBM (red): This super long-range missile can reach the entire map. It is slower
-   though, taking 5 turns to destroy its target. 12 research points. RED.
- - Trident (yellow): A compound warhead allows this missile to hit 3 tiles after 7 turns
+   so this is available to build immediately.
+ - ![ICBM Button](https://github.com/MrCocoNuat/second-strike/blob/main/assets/buttonICBM.png)
+   ICBM (red): This super long-range missile can reach the entire map. It is slower
+   though, taking 5 turns to destroy its target. 12 research points.
+ - ![Trident Button](https://github.com/MrCocoNuat/second-strike/blob/main/assets/buttonTrident.png)
+   Trident (yellow): A compound warhead allows this missile to hit 3 tiles after 7 turns
    simultaneously, but the huge payload restricts it to a 4 tile range. 24
-   research points. Yellow.
- - Dirty Bomb(green): This missile is designed to ravage the land it hits; after 9
+   research points. Y
+ - ![Dirty Button](https://github.com/MrCocoNuat/second-strike/blob/main/assets/buttonDirty.png)
+   Dirty Bomb (green): This missile is designed to ravage the land it hits; after 9
    turns of flight, this missile's target, which must be within 6 tiles, is
    irradiated. Dead-simple construction and thick depleted uranium plates also
    mean three cruise missiles are needed to destroy it. If this missile hits a
    silo, only the silo is irradiated, not its surroundings. 24 research points.
-   Green.
 
 Each player starts out with a nation composed of 2 randomly placed contiguous
 tiles, one of which is a capital. Each nation will also have a few missiles to
@@ -103,10 +123,12 @@ capacity drops to 1.
 
 The special tiles have the following effects:
  
- - Capital: While you have a capital, any research action gives 2 research
+ - ![Capital](https://github.com/MrCocoNuat/second-strike/blob/main/assets/capital.png)
+   Capital: While you have a capital, any research action gives 2 research
    points to the subject instead of 1. This is very important in the early
    game!
- - Silo: A silo can carry 4 missiles instead of 2, and every missile launched
+ - ![Silo](https://github.com/MrCocoNuat/second-strike/blob/main/assets/silo.png)
+   Silo: A silo can carry 4 missiles instead of 2, and every missile launched
    from it travels 2 turns faster. This impressive striking power comes at a
    cost: if a silo is destroyed, the 4 adjacent tiles will also be destroyed.
    Beware of chain detonations!
@@ -121,4 +143,4 @@ one alive. After this, the game will automatically kill itself in 30 seconds,
 so you can safely close the window. If you want to replay, just re-open the
 .jar.
 
-How will you do in a game where the only winning move is not to play?
+How will you do in a game where the only winning move is *not to play*?
